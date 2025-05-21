@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Sentiment Analysis</h2>
+<form method="POST">
+    <div class="mb-3">
+        <label for="text1">Enter text:</label>
+        <textarea class="form-control" style="height: 150px;" id="text1" name="text1"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Analyze</button>
+</form>
+
+{% if final %}
+    <h3>Prediction</h3>
+    <p>Text: {{ text1 }}</p>
+    <p>Emotion: {{ final }}</p>
+{% endif %}
+{% endblock %}
